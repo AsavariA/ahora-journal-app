@@ -1,21 +1,40 @@
 import './App.css';
-import React from "react"
+import React,{useState, useEffect} from "react"
 import Landing from "./Landing"
+import Journal from "./Journal"
+import fire from './fire'
 
-class App extends React.Component {
-  constructor(){
-    super()
-    this.state={}
-}
+function App(){
+  const [user, setUser] = useState('')
 
-  render(){
-    return (
-      <div>
-        <Landing />
-    </div>
-    );
+  const handleLogout = () =>{
+    fire.auth().signOut();
   }
-  
+
+  const authListener = () => {
+    fire.auth().onAuthStateChanged(user => {
+      if(user){
+        setUser(user);
+      }else{
+        setUser('');
+      }
+    })
+  }
+
+  useEffect(()=>{
+    authListener();
+    console.log(user);
+  },[])
+
+  return (
+    <div>
+      {user === '' ? (
+        <Journal handleLogout={handleLogout}/>
+      ):(
+        <Landing />
+      )}
+    </div>
+  );
 }
 
 export default App;
