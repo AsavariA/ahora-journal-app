@@ -39,6 +39,12 @@ button{
     background-color: white;
 }
 
+span{
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 769px){
     .form-div{
         width: 100%;

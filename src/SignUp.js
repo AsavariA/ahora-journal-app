@@ -1,14 +1,8 @@
 import './App.css';
-import React from "react"
-import './SignUp.css';
+import React, {useState} from "react"
+import './Login.css';
 
-class SignUp extends React.Component{
-    constructor(){
-        super()
-        this.state={}
-    }
-
-    render(){
+function SignUp(props){
         return(
             <div className="form-div">
                 <h1>Sign Up</h1>
@@ -35,10 +29,9 @@ class SignUp extends React.Component{
                     />
                 </form>
                 <button>Register</button>
-                <p>Have an account? <span>Sign In</span></p>
+                <p>Have an account? <span onClick={props.changeSignInStatus}>Sign In</span></p>
             </div>
         )
-    }
 }
 
 export default SignUp

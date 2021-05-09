@@ -1,13 +1,16 @@
-import React from "react"
+import React,  { useState, useEffect } from "react"
 import "./Landing.css"
 import SignUp from "./SignUp"
+import Login from"./Login"
 
-class Landing extends React.Component{
-    constructor(){
-        super()
-        this.state={}
-    }
-    render(){
+function Landing(){
+  const[ hasAccount,setHasAccount ] = useState(false)
+
+  function changeSignInStatus(){
+    setHasAccount(prevHasAccount => !prevHasAccount)
+    console.log(hasAccount)
+  }
+
         return(
             <div className="main">
             <div className="col-1">
@@ -17,11 +20,13 @@ class Landing extends React.Component{
               </div>
             </div>
             <div className="col-2">
-              <SignUp />
+              {hasAccount?
+              (<Login changeSignInStatus={changeSignInStatus}/>):
+              (<SignUp changeSignInStatus={changeSignInStatus}/>)
+            }     
             </div>
           </div>
         )
-    }
 }
 
 export default Landing
