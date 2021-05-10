@@ -6,13 +6,9 @@ import './Login.css';
 // import fire from "./fire"
 
 function Landing(props){
-  const[ hasAccount,setHasAccount ] = useState(false)
 
-  const {email, setEmail, password, setPassword, handleSignUp, handleLogin, emailError, passwordError} = props;
+  const {email, setEmail, password, setPassword, handleSignUp, handleLogin, emailError, passwordError, hasAccount, setHasAccount} = props;
 
-  function changeSignInStatus(){
-    setHasAccount(prevHasAccount => !prevHasAccount)
-  }
         return(
             <div className="main">
             <div className="col-1">
@@ -34,19 +30,17 @@ function Landing(props){
                       value={email}
                       onChange={(e)=>setEmail(e.target.value)}
                   />
-                  <p>{emailError}</p>
                   <input 
                       type="password"
                       name="full-name"
-                      placeholder="Password"
+                      placeholder="Password (min 6 characters)"
                       required
                       value={password}
                       onChange={(e)=>setPassword(e.target.value)}
                   />
-                  <p>{passwordError}</p>
               <button onClick={handleLogin} >Log In</button>
               </form>
-              <p>Don't have an account? <span onClick={changeSignInStatus}>Sign Up</span></p>
+              <p>Don't have an account? <span onClick={()=>setHasAccount(!hasAccount)}>Sign Up</span></p>
           </div>
 
         ):(
@@ -67,16 +61,14 @@ function Landing(props){
                       value={email}
                       onChange={(e)=>setEmail(e.target.value)}
                   />
-                  <p>{emailError}</p>
                   <input 
                       type="password"
                       name="full-name"
-                      placeholder="Password"
+                      placeholder="Password (min 6 characters)"
                       required
                       value={password}
                       onChange={(e)=>setPassword(e.target.value)}
                   />
-                  <p>{passwordError}</p>
                   <input 
                       type="password"
                       name="full-name"
@@ -84,7 +76,7 @@ function Landing(props){
                   />
               <button onClick={handleSignUp} >Register</button>
               </form>
-              <p>Have an account? <span onClick={changeSignInStatus}>Sign In</span></p>
+              <p>Have an account? <span onClick={()=>setHasAccount(!hasAccount)}>Sign In</span></p>
           </div>
           )
         }     

@@ -5,6 +5,7 @@ import Journal from "./Journal"
 import fire from './fire'
 
 function App(){
+  const[ hasAccount,setHasAccount ] = useState(false)
   const [user, setUser] = useState(null)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -90,6 +91,8 @@ function App(){
           handleSignUp = {handleSignUp}
           emailError = {emailError}
           passwordError = {passwordError}
+          hasAccount = {hasAccount}
+          setHasAccount = {setHasAccount}
           />
       )}
     </div>
