@@ -1,62 +1,14 @@
 import React,  { useState, useEffect } from "react"
 import "./Landing.css"
-import SignUp from "./SignUp"
-import Login from"./Login"
-import fire from "./fire"
+import './Login.css';
+// import SignUp from "./SignUp"
+// import Login from"./Login"
+// import fire from "./fire"
 
-function Landing(){
+function Landing(props){
   const[ hasAccount,setHasAccount ] = useState(false)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [emailError, setEmailError] = useState('')
-  const [passwordError, setPasswordError] = useState('')
-  
-  const clearInputs = () => {
-    setEmail('');
-    setPassword('');
-  }
 
-  const clearErrors = () => {
-    setEmailError('');
-    setPasswordError('');
-  }
-
-  const handleLogin = () => {
-    clearErrors();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch(err => {
-        switch(err.code){
-          case "auth/invalid-email":
-          case "auth/user-disabled":
-          case "auth/user-not-found":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong-password":
-            setPasswordError(err.message);
-            break;  
-        }
-      })
-  }
-
-  const handleSignUp = () => {
-    clearErrors();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch(err => {
-        switch(err.code){
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setEmailError(err.message);
-            break;
-          case "auth/weak-password":
-            setPasswordError(err.message);
-            break;  
-        }
-      })
-  }
+  const {email, setEmail, password, setPassword, handleSignUp, handleLogin, emailError, passwordError} = props;
 
   function changeSignInStatus(){
     setHasAccount(prevHasAccount => !prevHasAccount)
@@ -71,29 +23,71 @@ function Landing(){
             </div>
             <div className="col-2">
               {hasAccount?
-              (<Login 
-                changeSignInStatus={changeSignInStatus}
-                email={email}
-                setEmail={setEmail}
-                password={password}
-                setPassword={setPassword}
-                handleLogin={handleLogin}
-                emailError={emailError}
-                passwordError={passwordError}
-                clearInputs={clearInputs}
-                />):
-              (<SignUp 
-                changeSignInStatus={changeSignInStatus}
-                email={email}
-                setEmail={setEmail}
-                password={password}
-                setPassword={setPassword}
-                handleSignUp={handleSignUp}
-                emailError={emailError}
-                passwordError={passwordError}
-                clearInputs={clearInputs}
-                />)
-            }     
+              (<div className="form-div">
+              <h1>Sign In</h1>
+              <form>
+                  <input 
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
+                  />
+                  <p>{emailError}</p>
+                  <input 
+                      type="password"
+                      name="full-name"
+                      placeholder="Password"
+                      required
+                      value={password}
+                      onChange={(e)=>setPassword(e.target.value)}
+                  />
+                  <p>{passwordError}</p>
+              <button onClick={handleLogin} >Log In</button>
+              </form>
+              <p>Don't have an account? <span onClick={changeSignInStatus}>Sign Up</span></p>
+          </div>
+
+        ):(
+
+            <div className="form-div">
+              <h1>Sign Up</h1>
+              <form>
+                  <input 
+                      type="text"
+                      name="full-name"
+                      placeholder="Full name"
+                  />
+                  <input 
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
+                  />
+                  <p>{emailError}</p>
+                  <input 
+                      type="password"
+                      name="full-name"
+                      placeholder="Password"
+                      required
+                      value={password}
+                      onChange={(e)=>setPassword(e.target.value)}
+                  />
+                  <p>{passwordError}</p>
+                  <input 
+                      type="password"
+                      name="full-name"
+                      placeholder="Confirm Password"
+                  />
+              <button onClick={handleSignUp} >Register</button>
+              </form>
+              <p>Have an account? <span onClick={changeSignInStatus}>Sign In</span></p>
+          </div>
+          )
+        }     
             </div>
           </div>
         )

@@ -1,15 +1,17 @@
 import React from "react"
 import fire from "./fire"
 
-function Journal(props){
+function Journal(){
+
+  const handleLogout = () => {
+    fire.auth().signOut();
+  }
 
     return(
         <div>
             <h1>Hello</h1>
-            <button onClick={console.log('clicked!')}>LogOut</button>
+            <button onClick={handleLogout()}>LogOut</button>
         </div>
-        
-
     )
 }
 
