@@ -1,9 +1,9 @@
 import React,  { useState, useEffect } from "react"
 import "./Landing.css"
 import './Login.css';
-// import SignUp from "./SignUp"
-// import Login from"./Login"
-// import fire from "./fire"
+import SignUp from "./SignUp"
+import Login from"./Login"
+import fire from "./fire"
 
 function Landing(props){
 

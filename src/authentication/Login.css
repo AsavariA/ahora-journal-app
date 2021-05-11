@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-div{
+    padding: 3vw 5vw;
+    margin: 7vw auto;
+    border:rgb(117, 61, 9) solid 1px;
+    border-radius: 1rem;
+    width: 60%;
+    /* background-color: rgba(220,169,120); */
+/* box-shadow: 17px 18px 12px -12px rgba(193,157,116,0.75);
+-webkit-box-shadow: 17px 18px 12px -12px rgba(193,157,116,0.75);
+-moz-box-shadow: 17px 18px 12px -12px rgba(193,157,116,0.75); */
+background-color: #FFF6D6;
+}
+
+.form-div p, .form-div h1{
+ color: rgb(117, 61, 9);
+}
+
+ValidatorForm{
+    display: block;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+@media screen and (max-width: 769px){
+    .form-div{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: 2em solid white;
+        box-shadow: none;
+    }
+}
