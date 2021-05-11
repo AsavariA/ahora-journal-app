@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Login.css';
 import "./Landing.css";
 import { Button, Link, makeStyles } from '@material-ui/core';
-import { BeatLoader } from 'react-spinners';
+import { PropagateLoader } from 'react-spinners';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
@@ -17,8 +17,8 @@ function SignUp(props){
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [loading, setLoading] = useState(false);
-    const [nameErr, setNameErr] = useState(false);
-    const [pwdError, setPwdError] = useState(false);
+    // const [nameErr, setNameErr] = useState(false);
+    // const [pwdError, setPwdError] = useState(false);
 
     const handleName = (event) => {
         setName(event.target.value);
@@ -160,7 +160,7 @@ function SignUp(props){
                                     // variant="filled"
                                 />
                                 {loading ? (
-                                    <BeatLoader className={classes.loading}
+                                    <PropagateLoader className={classes.loading}
                                         size={'10px'}
                                         color={"#000"}
                                         loading={loading}

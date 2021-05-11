@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import './Login.css';
 import "./Landing.css"
 import { Button, Link, makeStyles } from '@material-ui/core';
-import { BeatLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
@@ -91,7 +91,7 @@ function Login(props){
                                 />
                                 <br/>
                                 {loading ? (
-                                    <BeatLoader
+                                    <PropagateLoader
                                         size={'10px'}
                                         color={"#000"}
                                         loading={loading}
