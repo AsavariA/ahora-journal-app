@@ -1,7 +1,6 @@
 import './App.css';
 import React,{useState, useEffect} from "react"
 import Journal from "./main-layout/Journal"
-import fire from './services/fire'
 import Login from './authentication/Login'
 import SignUp from './authentication/SignUp'
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import './Login.css';
 import "./Landing.css"
 import { Button, Link, makeStyles } from '@material-ui/core';
@@ -72,6 +72,7 @@ function Login(props){
                                     value={email}
                                     validators={['required', 'isEmail']}
                                     errorMessages={['this field is required', 'email is not valid']}
+                                    size="small"
                                     // variant="filled"
                                 />
                                 <TextValidator
@@ -87,6 +88,7 @@ function Login(props){
                                     validators={['required']}
                                     errorMessages={['this field is required']}
                                     autoComplete="off"
+                                    size="small"
                                     // variant="filled"
                                 />
                                 <br/>

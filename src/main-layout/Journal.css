@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: normal;
+  }
+
+  .journal-main{
+      height: 100vh;
+      width: 100%;
+      border-left: 1.2rem solid ;
+      border-right: 1.2rem solid ;
+      border-bottom: 1.2rem solid ;
   }
 
   .header{
@@ -9,9 +18,15 @@
       display: grid;
     grid-template-columns: 4fr 1fr 1fr;
 }
-.header h1{
-    font-weight: normal;
-}
+    .header h1{
+        font-weight: normal;
+    }
+
+    .components{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 
 
   @media screen and (max-width: 769px){
@@ -21,5 +36,8 @@
     }
     .header h1{
         font-size: medium;
+    }
+    .journal-main{
+        border: none;
     }
     }

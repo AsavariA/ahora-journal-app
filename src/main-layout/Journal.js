@@ -4,6 +4,11 @@ import "./Journal.css"
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
+// import Notes from "./Components/Notes"
+// import Kanban from "./Components/Kanban"
+// import Pomodoro from "./Components/Pomodoro"
+// import Calendar from "./Components/Calendar"
+// import Productivity from "./Components/Productivity"
 
 function Journal(props){
 const db=fire.firestore();
@@ -43,7 +48,7 @@ if(localStorage.getItem('user')!==null){
     });
 }
     return(
-        <div>
+        <div className='journal-main' style={{borderColor: Color}}>
             <div className="header" style={{backgroundColor: Color}}>
             <h1>Hello {UserName.split(' ')[0]} :)</h1>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>
@@ -61,6 +66,13 @@ if(localStorage.getItem('user')!==null){
             </Menu>
             <Button onClick={handleLogOut}>Logout</Button>
             </div>
+            {/* <div className="components">
+                <Notes />
+                <Kanban />
+                <Pomodoro />
+                <Calendar />
+                <Productivity />
+            </div> */}
         </div>
     )
 }
