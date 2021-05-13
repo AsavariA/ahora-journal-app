@@ -66,7 +66,7 @@ if(localStorage.getItem('user')!==null){
             </Menu>
             <Button onClick={handleLogOut}>Logout</Button>
             </div>
-            <div className="components">
+            <div className="components" style={{padding:'10px'}}>
                 {/* <Notes />
                 <Kanban /> */}
                 <Pomodoro />

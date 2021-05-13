@@ -1,10 +1,10 @@
 import React from 'react'
+import './pomodoro_components.css'
 
-const Block = ({param, number}) => {
+const Block = ({number}) => {
     return (
-        <div style={{textAlign: 'center'}}>
+        <div className="block">
             <h1>{number}</h1>
-            <h2>{param}</h2>
         </div>
     )
 }

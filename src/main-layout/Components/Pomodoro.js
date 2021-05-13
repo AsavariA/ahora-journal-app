@@ -3,15 +3,16 @@ import Form from './Pomodoro Components/Form'
 import Timer from './Pomodoro Components/Timer'
 import Finished from './Pomodoro Components/Finished'
 // import Block from './Pomodoro Components/Block'
+import './Pomodoro Components/pomodoro_components.css'
 
 function Pomodoro(){
 
     const [timeLeft, setTimeLeft] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
+    const [isPaused, setIsPaused] = useState(true);
 
     return(
-        <div>
-            <h2>Pomodoro</h2>
+        <div className="pomodoro-main">
+            <h2>Focus Timer</h2>
             <Form setTimeLeft={setTimeLeft} setIsPaused={setIsPaused}/>
             { timeLeft < 0 ? 
                 <Finished 

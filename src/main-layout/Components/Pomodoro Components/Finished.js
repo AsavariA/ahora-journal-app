@@ -1,5 +1,6 @@
 import React from 'react'
 import Confetti from 'react-confetti'
+import './pomodoro_components.css'
 // import useSound from 'use-sound'
 
 const Finished = ({setTimeLeft, setIsPaused}) => {
@@ -8,9 +9,9 @@ const Finished = ({setTimeLeft, setIsPaused}) => {
 
     return (
         <div>
-            <Confetti width={width}/>
-            <h2>Congratulations! You finished your Pomodoro!</h2>
-            <button onClick={ ()=>{setTimeLeft(0); setIsPaused(true);} }>Reset</button>
+            <Confetti width={width} gravity={0.2}/>
+            <p>Congratulations! You finished your Pomodoro!</p>
+            <button className="reset" onClick={ ()=>{setTimeLeft(0); setIsPaused(true);} }>Reset</button>
         </div>
     )
 }
