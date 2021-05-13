@@ -8,7 +8,7 @@ const Finished = ({setTimeLeft, setIsPaused}) => {
     let width=window.innerWidth;
 
     return (
-        <div>
+        <div className="finish">
             <Confetti width={width} gravity={0.2}/>
             <p>Congratulations! You finished your Pomodoro!</p>
             <button className="reset" onClick={ ()=>{setTimeLeft(0); setIsPaused(true);} }>Reset</button>

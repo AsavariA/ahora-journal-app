@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 // import Notes from "./Components/Notes"
 // import Kanban from "./Components/Kanban"
 import Pomodoro from "./Components/Pomodoro"
-// import Calendar from "./Components/Calendar"
+import SmallCalendar from "./Components/SmallCalendar"
 // import Productivity from "./Components/Productivity"
 
 function Journal(props){
@@ -70,8 +70,8 @@ if(localStorage.getItem('user')!==null){
                 {/* <Notes />
                 <Kanban /> */}
                 <Pomodoro />
-                {/* <Calendar />
-                <Productivity /> */}
+                <SmallCalendar />
+                {/* <Productivity /> */}
             </div>
         </div>
     )
