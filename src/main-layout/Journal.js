@@ -6,7 +6,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 // import Notes from "./Components/Notes"
 // import Kanban from "./Components/Kanban"
-// import Pomodoro from "./Components/Pomodoro"
+import Pomodoro from "./Components/Pomodoro"
 // import Calendar from "./Components/Calendar"
 // import Productivity from "./Components/Productivity"
 
@@ -66,13 +66,13 @@ if(localStorage.getItem('user')!==null){
             </Menu>
             <Button onClick={handleLogOut}>Logout</Button>
             </div>
-            {/* <div className="components">
-                <Notes />
-                <Kanban />
+            <div className="components">
+                {/* <Notes />
+                <Kanban /> */}
                 <Pomodoro />
-                <Calendar />
-                <Productivity />
-            </div> */}
+                {/* <Calendar />
+                <Productivity /> */}
+            </div>
         </div>
     )
 }
