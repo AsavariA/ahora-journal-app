@@ -19,7 +19,7 @@ const Timer = ({timeLeft, setTimeLeft, isPaused, setIsPaused}) => {
 
     return (
         <div>
-            <div style={{display:'flex'}}>
+            <div className='block-div' style={{display:'flex'}}>
                 <Block number={minutes} /><h1>:</h1><Block number={seconds}/>
             </div>
             <button onClick={ ()=>{setTimeLeft(0); setIsPaused(true);} }>Reset</button>

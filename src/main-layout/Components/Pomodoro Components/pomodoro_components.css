@@ -5,8 +5,9 @@
 }
 
 .pomodoro-main{
-    width: 17rem;
-    height: 17rem;
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
     border: 2px solid black;
     padding: 1rem;
     text-align: center;
@@ -36,13 +37,17 @@ input:focus{
 .inputs{
     border: 2px solid teal;
     border-radius: 5px;
-    margin: 1rem auto;
+    margin: 1rem auto 2rem auto;
     width: 90%;
     background-color: white;
 }
 
 .block{
     margin: auto;
+}
+
+.block-div{
+    margin: 1rem auto;
 }
 
 button{

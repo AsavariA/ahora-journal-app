@@ -5,12 +5,31 @@
     font-weight: normal;
   }
 
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #dadada; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(184, 183, 183); 
+  }
+
   .journal-main{
-      height: 100vh;
+      height: auto;
       width: 100%;
-      border-left: 1.2rem solid ;
-      border-right: 1.2rem solid ;
-      border-bottom: 1.2rem solid ;
+      border: none;
+      padding-bottom: 1rem;
   }
 
   .header{
@@ -21,13 +40,26 @@
     .header h1{
         font-weight: normal;
     }
+    
+    .notes { grid-area: notes; }
+    .kanban { grid-area: kanban; }
+    .pomodoro { grid-area: pomodoro; width: 100%;}
+    .smallcalendar { grid-area: smallcalendar;}
+    .productivity { grid-area: productivity;}
 
     .components{
-        display: block;
+        display: grid;
+        grid-template-areas:
+            'kanban kanban kanban kanban kanban kanban notes smallcalendar'
+            'kanban kanban kanban kanban kanban kanban pomodoro productivity';
+        grid-gap: 1.5rem;
+        width: fit-content;
+        margin: auto;
     }
 
 
-  @media screen and (max-width: 769px){
+
+  /* @media screen and (max-width: 769px){
     .header{
         padding: 0.8em 2rem;
         display: block;
@@ -38,4 +70,4 @@
     .journal-main{
         border: none;
     }
-    }
+    } */

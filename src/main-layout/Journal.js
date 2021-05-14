@@ -4,11 +4,11 @@ import "./Journal.css"
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
-// import Notes from "./Components/Notes"
-// import Kanban from "./Components/Kanban"
+import Notes from "./Components/Notes"
+import Kanban from "./Components/Kanban"
 import Pomodoro from "./Components/Pomodoro"
 import SmallCalendar from "./Components/SmallCalendar"
-// import Productivity from "./Components/Productivity"
+import Productivity from "./Components/Productivity"
 
 function Journal(props){
 const db=fire.firestore();
@@ -48,7 +48,7 @@ if(localStorage.getItem('user')!==null){
     });
 }
     return(
-        <div className='journal-main' style={{borderColor: Color}}>
+        <div className='journal-main' style={{backgroundColor: Color}}>
             <div className="header" style={{backgroundColor: Color}}>
             <h1>Hello {UserName.split(' ')[0]} :)</h1>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>
@@ -66,12 +66,17 @@ if(localStorage.getItem('user')!==null){
             </Menu>
             <Button onClick={handleLogOut}>Logout</Button>
             </div>
-            <div className="components" style={{padding:'10px'}}>
-                {/* <Notes />
-                <Kanban /> */}
-                <Pomodoro />
-                <SmallCalendar />
-                {/* <Productivity /> */}
+            <div className="components" style={{backgroundColor:Color}}>
+                <div className='notes' style={{border: '2px solid black',backgroundColor:'white'}}><Notes/></div>
+                <div className='kanban' style={{border: '2px solid black',backgroundColor:'white'}}><Kanban /></div>
+                <div className='pomodoro' ><Pomodoro /></div>
+                <div className='smallcalendar'>
+                    {/* <h1 style={{writingMode:'vertical-rl', letterSpacing:'0.2rem', margin:'auto 0', fontSize:'2.5rem',transform:'rotate(180deg)', lineHeight:'4rem'}}>CALENDAR</h1> */}
+                    <SmallCalendar />
+                </div>
+                <div className='productivity' style={{border: '2px solid black',backgroundColor:'white'}} >
+                    {/* <h1 style={{writingMode:'vertical-rl', letterSpacing:'0.2rem', margin:'auto 0', fontSize:'2.5rem', transform:'rotate(180deg)',lineHeight:'4rem'}}>PRODUCTIVITY</h1> */}
+                    <Productivity/></div> 
             </div>
         </div>
     )

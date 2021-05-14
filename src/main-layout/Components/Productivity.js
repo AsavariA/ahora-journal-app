@@ -2,7 +2,9 @@ import React from 'react'
 
 function Productivity(){
     return(
-        <h2 style={{backgroundColor:"beige"}}>Productivity</h2>
+        <div>
+            <h2 style={{backgroundColor:"beige", width: '20rem'}}>Productivity</h2>
+        </div>
     )
 }
 
