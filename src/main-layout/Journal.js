@@ -70,13 +70,8 @@ if(localStorage.getItem('user')!==null){
                 <div className='notes' style={{border: '2px solid black',backgroundColor:'white'}}><Notes/></div>
                 <div className='kanban' style={{border: '2px solid black',backgroundColor:'white'}}><Kanban /></div>
                 <div className='pomodoro' ><Pomodoro /></div>
-                <div className='smallcalendar'>
-                    {/* <h1 style={{writingMode:'vertical-rl', letterSpacing:'0.2rem', margin:'auto 0', fontSize:'2.5rem',transform:'rotate(180deg)', lineHeight:'4rem'}}>CALENDAR</h1> */}
-                    <SmallCalendar />
-                </div>
-                <div className='productivity' style={{border: '2px solid black',backgroundColor:'white'}} >
-                    {/* <h1 style={{writingMode:'vertical-rl', letterSpacing:'0.2rem', margin:'auto 0', fontSize:'2.5rem', transform:'rotate(180deg)',lineHeight:'4rem'}}>PRODUCTIVITY</h1> */}
-                    <Productivity/></div> 
+                <div className='smallcalendar'><SmallCalendar /></div>
+                <div className='productivity' style={{border: '2px solid black',backgroundColor:'white'}} ><Productivity/></div> 
             </div>
         </div>
     )

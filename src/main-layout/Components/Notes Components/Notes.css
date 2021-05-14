@@ -1,0 +1,23 @@
+.notes-main{
+    text-align: center;
+    background-color: cornsilk;
+    height: 20rem;
+    padding: 0 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.ListItemDiv{
+    text-align: left !important;
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.ListItemDetailDiv{
+    font-size: 12px;
+}
+
+.ListItemDeleteButton{
+    cursor: pointer;
+}

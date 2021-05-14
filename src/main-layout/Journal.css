@@ -26,14 +26,14 @@
   }
 
   .journal-main{
-      height: auto;
+      height: 100vh;
       width: 100%;
       border: none;
       padding-bottom: 1rem;
   }
 
   .header{
-      padding: 1em 5rem;
+      padding: 0.5em 5rem;
       display: grid;
     grid-template-columns: 4fr 1fr 1fr;
 }
