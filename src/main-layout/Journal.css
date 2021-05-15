@@ -41,7 +41,7 @@
         font-weight: normal;
     }
     
-    .notes { grid-area: notes; }
+    .notes { grid-area: notes; height: 20rem; overflow-y: clip;}
     .kanban { grid-area: kanban; }
     .pomodoro { grid-area: pomodoro; width: 100%;}
     .smallcalendar { grid-area: smallcalendar;}
