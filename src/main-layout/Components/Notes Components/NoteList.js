@@ -20,8 +20,8 @@ function useLists() {
           }));
   
           setLists(lists);
-          console.log(lists);
         });
+        // eslint-disable-next-line
     }, []);
   
     return lists;

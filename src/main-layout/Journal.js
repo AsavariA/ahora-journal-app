@@ -51,6 +51,7 @@ if(localStorage.getItem('user')!==null){
         <div className='journal-main' style={{backgroundColor: Color}}>
             <div className="header" style={{backgroundColor: Color}}>
             <h1>Hello {UserName.split(' ')[0]} :)</h1>
+            <Button aria-controls="simple-menu" aria-haspopup="true">Calendar</Button>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>
             <Menu
                 id="simple-menu"

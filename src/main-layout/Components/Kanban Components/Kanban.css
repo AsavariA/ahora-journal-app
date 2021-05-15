@@ -1,6 +1,9 @@
 .column{
-    width: 13rem;
-    margin: 0 1rem;
+    width: 15rem;
+    height: 39.2rem;
+    margin: 0 0.5rem;
     background-color: lavender;
     text-align: center;
+    overflow-y: scroll;
+    overflow-x: clip;
 }

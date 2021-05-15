@@ -53,9 +53,9 @@ const AddNote = () => {
     return (
         <div>
             <ToastContainer />
-            <button onClick={handleClickOpen}>
+            <Button onClick={handleClickOpen}>
                 Add Task
-            </button>
+            </Button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">Add Task</DialogTitle>
                     <DialogContent>
