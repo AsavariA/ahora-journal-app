@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react"
-import fire from '../../../services/fire'
+import React, { useState, useEffect } from "react";
+import fire from '../../../services/fire';
+import './Notes.css'
 
 function useLists() {
     const [lists, setLists] = useState([]);
@@ -26,6 +27,7 @@ function useLists() {
   }
 
 const NoteList = () => {
+
     const lists = useLists();
     const userEmail = JSON.parse (localStorage.getItem ('user')).email
     const handleOnDelete = id => {
@@ -39,10 +41,11 @@ const NoteList = () => {
     };
 
     return (
+      <div>
         <div className="ListDiv">
             {lists.map(list => {
                 return (
-                <div className="ListItemDiv" style={{display:'flex', justifyContent:'space-between'}}>
+                <div className="ListItemDiv" style={{display:'flex', justifyContent:'space-between'}} >
                         <div>
                             <div className="ListTitleDiv">{list.title}</div>
                             <div className="ListItemDetailDiv">{list.body}</div>
@@ -52,6 +55,7 @@ const NoteList = () => {
                 );
             })}
         </div>
+      </div>
     )
 }
 
