@@ -20,6 +20,7 @@ function useLists() {
           }));
   
           setLists(lists);
+          console.log(lists);
         });
     }, []);
   

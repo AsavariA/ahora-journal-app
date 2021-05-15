@@ -1,9 +1,11 @@
 import React from 'react'
+import AddTodo from './AddTodo'
 
 const Column2 = () => {
     return (
         <div className="column">
-            Column2
+            <p>In Progress</p>
+            <AddTodo />
         </div>
     )
 }
