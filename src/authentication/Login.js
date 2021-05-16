@@ -67,6 +67,7 @@ function Login(props){
                                     variant="outlined"
                                     margin="normal"
                                     label="Email"
+                                    type="email"
                                     onChange={handleEmail}
                                     name="email"
                                     value={email}
