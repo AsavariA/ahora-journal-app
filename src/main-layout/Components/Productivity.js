@@ -4,8 +4,7 @@ import LineChart from './Productivity Components/LineChart'
 function Productivity(){
     return(
         <div>
-            {/* <h2 style={{backgroundColor:"beige"}}>Productivity</h2> */}
-            <div style={{padding:'0.5rem'}}>
+            <div style={{padding:'0.5rem', backgroundColor:'#EEFCEE'}}>
                 <LineChart/>
             </div>
         </div>
