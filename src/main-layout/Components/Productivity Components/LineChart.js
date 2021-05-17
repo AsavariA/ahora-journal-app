@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Line } from 'react-chartjs-2';
 import { useForm } from "react-hook-form"
 import * as $ from 'jquery';
@@ -23,6 +23,7 @@ function daysInThisMonth() {
   };
 
 const LineChart = () => {
+    const initialArray = (JSON.parse(localStorage.getItem("datasets")).arr) || (Array(daysInThisMonth()).fill(0));
     var month_names = ['January', 'February', 'March', 
                'April', 'May', 'June', 'July', 
                'August', 'September', 'October', 'November', 'December'];
@@ -32,7 +33,7 @@ const LineChart = () => {
     const [datasets, setDatasets] = useState(
       {
         label: 'Your Productivity',
-        data: Array(daysInThisMonth()).fill(0),
+        data: initialArray,
         fill: false,
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgba(255, 99, 132, 0.5)',
@@ -44,6 +45,11 @@ const LineChart = () => {
       datasets: [datasets],
   };            
 
+  useEffect (() => {
+    var array = {arr: datasets.data}
+    window.localStorage.setItem('datasets',JSON.stringify(array))
+  }, [datasets] )
+
     const onSubmit = (d) => {
         // console.log(d);
         // console.log(data);
@@ -52,6 +58,7 @@ const LineChart = () => {
         // console.log(data.datasets[0].data);
         var prodValues = data.datasets[0].data;
         prodValues[d.day-1]=d.prod;
+        console.log(prodValues)
         setDatasets({
           label: 'Your Productivity',
           data: prodValues,
@@ -63,15 +70,20 @@ const LineChart = () => {
     }
 
     const reset = () => {
-      setDatasets({
-        label: 'Your Productivity',
-        data: Array(daysInThisMonth()).fill(0),
-        fill: false,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgba(255, 99, 132, 0.5)',
-      })
+      var conf = window.confirm('Are you sure you want to reset the enitre chart? We recommend doing it on the 1st of each month so that you can start fresh for that month!');
+      if (conf===true){
+          setDatasets({
+          label: 'Your Productivity',
+          data: Array(daysInThisMonth()).fill(0),
+          fill: false,
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgba(255, 99, 132, 0.5)',
+        })
+      }
     }
-    var d = new Date();
+
+
+
     return (
         <div>
             <h2 style={{textAlign: 'center'}}>{month}</h2>
@@ -83,7 +95,7 @@ const LineChart = () => {
                             name="day"
                             id="day-input"
                             type='number'
-                            defaultValue={d.getDate()} 
+                            defaultValue={date.getDate()} 
                             {...register("day",{
                                 required: {value: true, message: ""},
                                 min: {value: 1,  message: ""},
