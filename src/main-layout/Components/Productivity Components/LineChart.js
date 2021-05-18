@@ -23,7 +23,7 @@ function daysInThisMonth() {
   };
 
 const LineChart = () => {
-    const initialArray = (JSON.parse(localStorage.getItem("datasets")).arr) || (Array(daysInThisMonth()).fill(0));
+    const initialArray = localStorage.getItem('datasets') ? (JSON.parse(localStorage.getItem("datasets")).arr) : (Array(daysInThisMonth()).fill(0));
     var month_names = ['January', 'February', 'March', 
                'April', 'May', 'June', 'July', 
                'August', 'September', 'October', 'November', 'December'];
