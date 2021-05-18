@@ -19,7 +19,9 @@ useEffect(()=>{
   userState();
 },[]);
 
-  return (
+    return (
+        <div>
+            
       <>
         {user !== null ? (
           <>
@@ -33,8 +35,8 @@ useEffect(()=>{
           
        </>
         )} 
-      </>
-     
+            </>
+        </div>
     );
 }
 
