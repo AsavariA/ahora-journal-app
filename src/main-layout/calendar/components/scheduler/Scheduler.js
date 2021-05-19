@@ -1,11 +1,12 @@
 /* eslint-disable */
 /*{ { src / components / Scheduler / Scheduler.js } }*/
-import React, { Component } from 'react';
+import React, { useState, useEffect, Component } from 'react'
 import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
 import './Scheduler.css';
 
 const scheduler = window.scheduler;
+
 
 export default class Scheduler extends Component {
 
@@ -13,24 +14,29 @@ export default class Scheduler extends Component {
         if (scheduler._$initialized) {
             return;
         }
+        //const [event, onDataUpdated] = React.useState(localStorage.getItem('event') || '');
 
-        const onDataUpdated = this.props.onDataUpdated;
+        //React.useEffect(() => {
+        //    localStorage.setItem('event', event);
+        //}, [event]
+        //);
+        //onDataUpdated = this.props.onDataUpdated;
 
         scheduler.attachEvent('onEventAdded', (id, ev) => {
             if (onDataUpdated) {
-                onDataUpdated('create', ev, id);
+                onDataUpdated('created', ev, id);
             }
         });
 
         scheduler.attachEvent('onEventChanged', (id, ev) => {
             if (onDataUpdated) {
-                onDataUpdated('update', ev, id);
+                onDataUpdated('updated', ev, id);
             }
         });
 
         scheduler.attachEvent('onEventDeleted', (id, ev) => {
             if (onDataUpdated) {
-                onDataUpdated('delete', ev, id);
+                onDataUpdated('deleted', ev, id);
             }
         });
         scheduler._$initialized = true;
@@ -51,9 +57,8 @@ export default class Scheduler extends Component {
 
         this.initSchedulerEvents();
 
-
         const { events } = this.props;
-        scheduler.init(this.schedulerContainer, new Date(2021, 5, 14));
+        scheduler.init(this.schedulerContainer, Date.now());
         scheduler.clearAll();
         scheduler.parse(events);
     }

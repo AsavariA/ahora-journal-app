@@ -1,6 +1,5 @@
 .scheduler-container {
-    height: 100vh;
+    height: calc(100vh - 150px);
     width: 100vw;
-    margin: 15px;
     background-color:#ffffff;
 }

@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\calendar",
     "\\src\\main-layout",
+    "\\src\\main-layout\\calendar",
+    "\\src\\main-layout\\calendar\\components",
+    "\\src\\main-layout\\calendar\\components\\MessageArea",
+    "\\src\\main-layout\\calendar\\components\\scheduler",
     "\\src\\main-layout\\Components",
-    "\\src\\main-layout\\Components\\Kanban Components",
+    "\\src\\main-layout\\Components\\Notes Components",
     "\\src\\main-layout\\Components\\Productivity Components"
   ],
-  "SelectedNode": "\\src\\main-layout\\Journal.js",
+  "SelectedNode": "\\src\\main-layout\\calendar\\components\\scheduler\\Scheduler.css",
   "PreviewInSolutionExplorer": false
 }
