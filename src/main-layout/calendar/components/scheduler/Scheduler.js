@@ -37,7 +37,7 @@ export default class Scheduler extends Component {
         //);
         const onDataUpdated = this.props.onDataUpdated;
 
-        scheduler.attachEvent('onEventSave', (id, ev) => {
+        scheduler.attachEvent('onEventAdded', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('created', ev, id);
             }

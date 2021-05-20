@@ -58,8 +58,9 @@ if(localStorage.getItem('user')!==null){
             <div className='journal-main' style={{ backgroundColor: Color }}>
                 {/*<Navbar />*/}
                 <div className="header" style={{backgroundColor: Color}}>
-                    <h1>Hello {UserName.split(' ')[0]} :)</h1>
-                <Link to="/cal" style={{ textDecoration: 'none' }}><Button aria-controls="simple-menu" aria-haspopup="true" >Calendar</Button></Link>
+                <h1>Hello {UserName.split(' ')[0]} :)</h1>
+                <Button aria-controls="simple-menu" aria-haspopup="true" ><Link to="/cal" style={{
+                    textDecoration: 'none', color: 'black'}}>Calendar</Link></Button>
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>
                 <Menu
                     id="simple-menu"

@@ -5,12 +5,12 @@
     "\\src\\main-layout",
     "\\src\\main-layout\\calendar",
     "\\src\\main-layout\\calendar\\components",
-    "\\src\\main-layout\\calendar\\components\\MessageArea",
     "\\src\\main-layout\\calendar\\components\\scheduler",
+    "\\src\\main-layout\\calendar\\public",
     "\\src\\main-layout\\Components",
-    "\\src\\main-layout\\Components\\Notes Components",
-    "\\src\\main-layout\\Components\\Productivity Components"
+    "\\src\\main-layout\\Components\\Productivity Components",
+    "\\src\\main-layout\\Components\\Small Calendar Components"
   ],
-  "SelectedNode": "\\src\\main-layout\\calendar\\components\\scheduler\\Scheduler.js",
+  "SelectedNode": "\\src\\main-layout\\Journal.css",
   "PreviewInSolutionExplorer": false
 }
