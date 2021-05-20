@@ -47,15 +47,16 @@ if(localStorage.getItem('user')!==null){
     }).catch(function(error){
         console.log("Error getting document: ",error)
     });
-}
 
-    return(
+}
+    return (
         <Router>
            <Switch>
-                <div className='journal-main' style={{ backgroundColor: Color }}>
+            <div className='journal-main' style={{ backgroundColor: Color }}>
+                {/*<Navbar />*/}
                 <div className="header" style={{backgroundColor: Color}}>
                     <h1>Hello {UserName.split(' ')[0]} :)</h1>
-                    <Link to= "/cal"><Button aria-controls="simple-menu" aria-haspopup="true" >Calendar</Button></Link>
+                <Link to="/cal" style={{ textDecoration: 'none' }}><Button aria-controls="simple-menu" aria-haspopup="true" >Calendar</Button></Link>
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>
                 <Menu
                     id="simple-menu"

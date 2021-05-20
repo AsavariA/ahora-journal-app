@@ -10,6 +10,7 @@
     "dhtmlx-scheduler": "^5.3.11",
     "firebase": "^8.5.0",
     "jquery": "^3.6.0",
+    "local-storage": "^2.0.0",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
     "react-chartjs-2": "^3.0.3",
