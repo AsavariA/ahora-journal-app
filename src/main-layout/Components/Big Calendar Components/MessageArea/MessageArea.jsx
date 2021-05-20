@@ -1,4 +1,3 @@
-import { extend } from 'jquery';
 import React, { Component } from 'react';
 
 export default class MessageArea extends Component {

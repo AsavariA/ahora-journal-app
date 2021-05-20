@@ -1,11 +1,7 @@
-//import Board from './components/Boards';
-//import Card from './components/card';
-import React, { Component, useState, useEffect } from 'react';
-import Scheduler from './components/scheduler';
-// eslint-disable-next-line 
-import './cal.css';
-import fire from '../../services/fire'
-import MessageArea from './components/MessageArea';
+import React from 'react';
+import Scheduler from './Big Calendar Components/scheduler';
+import './Big Calendar Components/cal.css';
+import MessageArea from './Big Calendar Components/MessageArea';
 
 
 

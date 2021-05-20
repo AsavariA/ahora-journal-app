@@ -3,8 +3,8 @@ import React,{useState, useEffect} from "react"
 import Journal from "./main-layout/Journal"
 import Login from './authentication/Login'
 import SignUp from './authentication/SignUp'
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
-import Cal from "./main-layout/calendar/cal";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Cal from "./main-layout/Components/BigCalendar";
 
 function App(){
   const [user,setUser]=useState('');
@@ -44,7 +44,7 @@ useEffect(()=>{
                         </div>
             </Switch>
         </Router>
-    );
+    )
 }
 
-export default App;
+export default App

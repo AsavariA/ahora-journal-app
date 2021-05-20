@@ -9,10 +9,7 @@ import Kanban from "./Components/Kanban"
 import Pomodoro from "./Components/Pomodoro"
 import SmallCalendar from "./Components/SmallCalendar"
 import Productivity from "./Components/Productivity"
-/*import styled, {css} from 'styled-components'*/
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
-import Cal from "./calendar/cal";
-
+import { BrowserRouter as Router, Switch, Link} from 'react-router-dom';
 
 function Journal(props){
 const db=fire.firestore();
@@ -53,8 +50,8 @@ if(localStorage.getItem('user')!==null){
 
 }
     return (
-        //<Router>
-        //    <Switch>
+        <Router>
+           <Switch>
             <div className='journal-main' style={{ backgroundColor: Color }}>
                 {/*<Navbar />*/}
                 <div className="header" style={{backgroundColor: Color}}>
@@ -84,8 +81,8 @@ if(localStorage.getItem('user')!==null){
                     <div className='productivity' style={{border: '2px solid black',backgroundColor:'white'}} ><Productivity/></div> 
                 </div>
                 </div>
-        //    </Switch>
-        //</Router>
+            </Switch>
+        </Router>
     )
 }
 
