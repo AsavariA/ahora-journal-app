@@ -3,7 +3,7 @@ import React,{useState, useEffect} from "react"
 import Journal from "./main-layout/Journal"
 import Login from './authentication/Login'
 import SignUp from './authentication/SignUp'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom';
 import Cal from "./main-layout/Components/BigCalendar";
 
 function App(){
@@ -24,7 +24,7 @@ useEffect(()=>{
     return (
         <Router>
             <Switch>
-                <Route exact path="/cal" component={Cal} />
+                <Route exact path="/cal" component={withRouter(Cal)} />
                     <div>
             
                   <>
