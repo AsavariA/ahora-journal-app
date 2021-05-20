@@ -5,8 +5,23 @@ import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
 import './Scheduler.css';
 
+
 const scheduler = window.scheduler;
 
+function daysInThisMonth() {
+    var now = new Date();
+    return new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+}
+
+//var eventId = scheduler.addEvent({
+//    start_date: "16-06-2019 09:00",
+//    end_date: "16-06-2019 12:00",
+//    text: "Meeting"
+//});
+
+//var event = scheduler.getEvent(eventId);
+//event.text = "Conference"; //changes event's data
+//scheduler.addEvent(event.id);
 
 export default class Scheduler extends Component {
 
@@ -20,9 +35,9 @@ export default class Scheduler extends Component {
         //    localStorage.setItem('event', event);
         //}, [event]
         //);
-        //onDataUpdated = this.props.onDataUpdated;
+        const onDataUpdated = this.props.onDataUpdated;
 
-        scheduler.attachEvent('onEventAdded', (id, ev) => {
+        scheduler.attachEvent('onEventSave', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('created', ev, id);
             }
@@ -59,9 +74,20 @@ export default class Scheduler extends Component {
 
         const { events } = this.props;
         scheduler.init(this.schedulerContainer, Date.now());
-        scheduler.clearAll();
+        /*scheduler.clearAll();*/
         scheduler.parse(events);
     }
+
+//    function Save = () => {
+
+//        let vars = scheduler._lame_copy(sheduler.getEvent(scheduler._lightbox_id));
+//        let startDate = vars.start_date;
+//        let endDate = = vars.end_date;
+//        var eventId = scheduler.addEvent({
+//            start_date: startDate,
+//            end_date: endDate
+//        })
+//}
 
     render() {
         return (

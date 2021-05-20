@@ -59,8 +59,7 @@ if(localStorage.getItem('user')!==null){
                 {/*<Navbar />*/}
                 <div className="header" style={{backgroundColor: Color}}>
                     <h1>Hello {UserName.split(' ')[0]} :)</h1>
-
-                        <Link to= "/cal"><Button aria-controls="simple-menu" aria-haspopup="true" >Calendar</Button></Link>
+                <Link to="/cal" style={{ textDecoration: 'none' }}><Button aria-controls="simple-menu" aria-haspopup="true" >Calendar</Button></Link>
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>
                 <Menu
                     id="simple-menu"
