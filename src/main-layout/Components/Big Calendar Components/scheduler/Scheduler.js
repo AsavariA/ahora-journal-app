@@ -66,12 +66,20 @@ export default class Scheduler extends Component {
         const { events } = this.props;
         scheduler.init(this.schedulerContainer, Date.now());
         /*scheduler.clearAll();*/
-        var bleh = JSON.parse(window.localStorage.getItem('events')).events;
-        console.log(JSON.parse(window.localStorage.getItem('events')).events);
-        scheduler.parse(bleh);
-        // console.log(scheduler.getEvents());
-        var calEvents = {events: scheduler.getEvents()}
-        window.localStorage.setItem('events',JSON.stringify(calEvents))
+        var bleh = JSON.parse(window.localStorage.getItem('events'));
+
+        if (bleh){
+            console.log(bleh.events);
+            scheduler.parse(bleh.events);
+            // console.log(scheduler.getEvents());
+            var calEvents = {events: scheduler.getEvents()}
+            window.localStorage.setItem('events',JSON.stringify(calEvents))
+        } else {
+            scheduler.parse(events);
+            var calEvents = {events: scheduler.getEvents()}
+            window.localStorage.setItem('events',JSON.stringify(calEvents))
+        }
+        
     }
 
     render() {
