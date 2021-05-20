@@ -3,6 +3,8 @@ import React,{useState, useEffect} from "react"
 import Journal from "./main-layout/Journal"
 import Login from './authentication/Login'
 import SignUp from './authentication/SignUp'
+import Scheduler from './Scheduler'
+import { BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 
 function App(){
   const [user,setUser]=useState('');
@@ -20,21 +22,28 @@ useEffect(()=>{
 },[]);
 
   return (
-      <>
-        {user !== null ? (
+    <Router>
+    <Switch>
+        <Route exact path="/cal" component={Scheduler} />
+            <div>
+    
           <>
-            <Journal setUserState={() => setUser(null)}/>
-          </>
-        ) : (
-           <>
-           {toggleForm ? 
-            (<Login loggedIn={(user) => setUser(user)} toggle={() => formMode()}/>) 
-          : (<SignUp toggle={() => formMode()}/>)}
-          
-       </>
-        )} 
-      </>
-     
+            {user !== null ? (
+              <>
+                <Journal setUserState={() => setUser(null)}/>
+              </>
+            ) : (
+               <>
+               {toggleForm ? 
+                (<Login loggedIn={(user) => setUser(user)} toggle={() => formMode()}/>) 
+              : (<SignUp toggle={() => formMode()}/>)}
+  
+           </>
+            )} 
+                </>
+                </div>
+    </Switch>
+</Router>
     );
 }
 

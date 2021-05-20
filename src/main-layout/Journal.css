@@ -57,17 +57,20 @@
         margin: auto;
     }
 
+    .responsive{
+      display: none;
+    }
 
+    @media screen and (max-width: 1025px){
+      .journal-main{
+      overflow-x: clip;
+      overflow-y: clip;
+      }
 
-  /* @media screen and (max-width: 769px){
-    .header{
-        padding: 0.8em 2rem;
+      .responsive{
         display: block;
-    }
-    .header h1{
-        font-size: medium;
-    }
-    .journal-main{
-        border: none;
-    }
-    } */
+        padding: 10rem 2rem;
+        backdrop-filter: blur(0.5);
+        text-align: center;
+      }
+  }
