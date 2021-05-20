@@ -28,7 +28,6 @@ class Cal extends React.Component {
         const message = `event ${action}: ${id} ${text}`;
         this.addMessage(message);
     }
-
     render() {
         const { messages } = this.state;
         return (
