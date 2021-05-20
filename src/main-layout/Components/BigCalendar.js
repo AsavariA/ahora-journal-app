@@ -1,7 +1,7 @@
 import React from 'react';
-import Scheduler from './components/scheduler';
-import './cal.css';
-import MessageArea from './components/MessageArea';
+import Scheduler from './Big Calendar Components/scheduler';
+import './Big Calendar Components/cal.css';
+import MessageArea from './Big Calendar Components/MessageArea';
 
 
 
