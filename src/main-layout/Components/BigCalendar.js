@@ -49,7 +49,8 @@ class Cal extends React.Component {
         this.state = {
             dialogText: 'To create an event, double click on the desired date.To increase/decresase the time span of the event in day or month view, pull the event box.',
             isDialogOpen: false,
-            isChecked: false
+            isChecked: false,
+            messages: []
         }
     }
 
@@ -74,10 +75,9 @@ class Cal extends React.Component {
     addMessage(message) {
         const maxLogLength = 5;
         const newMessage = { message };
-        const messages = [
-            newMessage,
-            ...this.state.messages
-        ];
+        const messages = this.state.messages;
+
+        messages.push(newMessage);
 
         if (messages.length > maxLogLength) {
             messages.length = maxLogLength;
