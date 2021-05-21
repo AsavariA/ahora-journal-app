@@ -10,16 +10,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import { withStyles } from '@material-ui/core/styles';
 
-//function AlertDailog() {
-//    const [open, setOpen] = React.useState(false);
-
-//    const handleClickopen = () => {
-//        setOpen(true);
-//    };
-//    const handleClose = () => {
-//        setOpen(false);
-//    };
-//}
 
 const styles = theme => ({
     root: {
@@ -50,7 +40,6 @@ class Cal extends React.Component {
 
         this.logDataUpdate = this.logDataUpdate.bind(this);
         this.addMessage = this.addMessage.bind(this);
-        /*this.handleDialogOK = this.handleDialogOK.bind(this);*/
         this.state = {
             dialogText: 'To create an event, double click on the desired date.To increase/decresase the time span of the event in day or month view, pull the event box. To change the date of an event, drag and drop the event box on the desired date.',
             isDialogOpen: false,
@@ -77,10 +66,6 @@ class Cal extends React.Component {
         const message = `event ${action}: ${id} ${text}`;
         this.addMessage(message);
     }
-    //handleDailogOK() {
-    //    console.log('clicked ok');
-    //    this.setState({ isDialogOpen: false });
-    //}
 
     handleDialogClose() {
         this.setState({ isDialogOpen: false });

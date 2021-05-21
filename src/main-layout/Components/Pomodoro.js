@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import Form from './Pomodoro Components/Form'
 import Timer from './Pomodoro Components/Timer'
 import Finished from './Pomodoro Components/Finished'
-// import Block from './Pomodoro Components/Block'
 import './Pomodoro Components/pomodoro_components.css'
 
 function Pomodoro(){

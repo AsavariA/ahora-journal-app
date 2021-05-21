@@ -1,5 +1,4 @@
-/* eslint-disable */
-/*{ { src / components / Scheduler / Scheduler.js } }*/
+
 import React, { useState, useEffect, Component } from 'react'
 import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
@@ -20,31 +19,25 @@ export default class Scheduler extends Component {
 
         scheduler.attachEvent('onEventAdded', (id, ev) => {
             if (onDataUpdated) {
-                onDataUpdated('created', ev, id);
-                // console.log(scheduler.getEvents());
+                onDataUpdated('created', ev, id)
                 var calEvents = {events: scheduler.getEvents()}
                 window.localStorage.setItem('events',JSON.stringify(calEvents))
-                // console.log('created')
             }
         });
 
         scheduler.attachEvent('onEventChanged', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('updated', ev, id);
-                // console.log(scheduler.getEvents());
                 var calEvents = {events: scheduler.getEvents()}
                 window.localStorage.setItem('events',JSON.stringify(calEvents))
-                // console.log('updated')
             }
         });
 
         scheduler.attachEvent('onEventDeleted', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('deleted', ev, id);
-                // console.log(scheduler.getEvents());
                 var calEvents = {events: scheduler.getEvents()}
                 window.localStorage.setItem('events',JSON.stringify(calEvents))
-                // console.log('deleted')
             }
         });
         scheduler._$initialized = true;
@@ -67,11 +60,10 @@ export default class Scheduler extends Component {
 
         const { events } = this.props;
         scheduler.init(this.schedulerContainer, Date.now());
-        /*scheduler.clearAll();*/
+       
         var bleh = JSON.parse(window.localStorage.getItem('events'));
 
         if (bleh){
-            // console.log(bleh.events);
             scheduler.parse(bleh.events);
              console.log(scheduler.getEvents());
             var calEvents = {events: scheduler.getEvents()}

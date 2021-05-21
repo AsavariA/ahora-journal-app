@@ -45,7 +45,6 @@ function useLists() {
 
 const Kanban = () =>{
     const [ToDoList, InProgressList, DoneList] = useLists();
-    // console.log(ToDoList, InProgressList, DoneList)
 
     return(
         <div style={{display:'flex', padding:'1rem 0.5rem'}}>
