@@ -1,5 +1,4 @@
-.taskbar {
-    
+.taskbar { 
     display: grid;
     grid-template-columns: 3fr 3fr ;
     text-decoration-style: none;
