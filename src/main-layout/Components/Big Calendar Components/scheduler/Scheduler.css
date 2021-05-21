@@ -1,7 +1,16 @@
-.taskbar { 
-    display: grid;
-    grid-template-columns: 3fr 3fr ;
-    text-decoration-style: none;
+.taskbar {
+    background-color: #288e9a;
+    display: flex;
+    justify-content: space-around;
+    align-content: end;
+}
+
+.btn1 {
+    width:min-content;
+}
+
+.btn2 {
+    width: min-content;
 }
 
 .scheduler-container {
@@ -9,3 +18,5 @@
     width: 100vw;
     background-color:#ffffff;
 }
+
+/*//for terrace theme bgcolor::after */

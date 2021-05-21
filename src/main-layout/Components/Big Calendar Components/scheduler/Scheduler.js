@@ -3,6 +3,8 @@
 import React, { useState, useEffect, Component } from 'react'
 import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
+import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_terrace.css';
+
 import './Scheduler.css';
 
 
@@ -50,7 +52,7 @@ export default class Scheduler extends Component {
     }
 
     componentDidMount() {
-        scheduler.skin = 'material';
+        scheduler.skin = 'terrace';
         scheduler.config.header = [
             'day',
             'week',
@@ -71,7 +73,7 @@ export default class Scheduler extends Component {
         if (bleh){
             console.log(bleh.events);
             scheduler.parse(bleh.events);
-            // console.log(scheduler.getEvents());
+             console.log(scheduler.getEvents());
             var calEvents = {events: scheduler.getEvents()}
             window.localStorage.setItem('events',JSON.stringify(calEvents))
         } else {

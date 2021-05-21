@@ -38,37 +38,24 @@ const styles = theme => ({
 });
 
 class Cal extends React.Component {
-    //state = {
-    //    messages: []
-    //};
+    state = {
+        messages: []
+    };
+
+
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleDialogClose = this.handleDialogClose.bind(this);
+
+        this.logDataUpdate = this.logDataUpdate.bind(this);
+        this.addMessage = this.addMessage.bind(this);
         /*this.handleDialogOK = this.handleDialogOK.bind(this);*/
         this.state = {
             dialogText: 'To create an event, double click on the desired date.To increase/decresase the time span of the event in day or month view, pull the event box. To change the date of an event, drag and drop the event box on the desired date.',
             isDialogOpen: false,
             isChecked: false
         }
-    }
-
-    //handleDailogOK() {
-    //    console.log('clicked ok');
-    //    this.setState({ isDialogOpen: false });
-    //}
-
-    handleDialogClose() {
-        this.setState({ isDialogOpen: false });
-    }
-
-    handleChange(e) {
-        const target = e.target;
-        const value = target.checked;
-        this.setState({
-            isChecked: value,
-            isDialogOpen: true
-        }, () => { console.log('open dialog') });
     }
 
     addMessage(message) {
@@ -90,15 +77,33 @@ class Cal extends React.Component {
         const message = `event ${action}: ${id} ${text}`;
         this.addMessage(message);
     }
+    //handleDailogOK() {
+    //    console.log('clicked ok');
+    //    this.setState({ isDialogOpen: false });
+    //}
 
+    handleDialogClose() {
+        this.setState({ isDialogOpen: false });
+    }
+
+    handleChange(e) {
+        const target = e.target;
+        const value = target.checked;
+        this.setState({
+            isChecked: value,
+            isDialogOpen: true
+        }, () => { console.log('open dialog') });
+    }
+
+    
     render() {
-        /*const { messages } = this.state;*/
+        const { messages } = this.state;
         const { classes } = this.props;
         return (
             
             <div>
                 <div className='taskbar'>
-                    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleChange} checked={this.state.isChecked} >Help</Button>
+                    <Button className="btn1" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleChange} checked={this.state.isChecked} >Help</Button>
                     <Dialog
                         open={this.state.isDialogOpen}
                         onClose={this.handleDialogClose}
@@ -113,7 +118,7 @@ class Cal extends React.Component {
                             </DialogActions>
                         </DialogContent>
                     </Dialog>
-                    <Button aria-controls="simple-menu" aria-haspopup="true" ><Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Back</Link></Button>
+                    <Button className="btn2" aria-controls="simple-menu" aria-haspopup="true" ><Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Back</Link></Button>
                 </div>
                 <div className='scheduler-container'>
                     <Scheduler

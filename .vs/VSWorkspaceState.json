@@ -5,7 +5,9 @@
     "\\src\\main-layout",
     "\\src\\main-layout\\Components",
     "\\src\\main-layout\\Components\\Big Calendar Components",
+    "\\src\\main-layout\\Components\\Big Calendar Components\\MessageArea",
     "\\src\\main-layout\\Components\\Big Calendar Components\\scheduler",
+    "\\src\\main-layout\\Components\\Kanban Components",
     "\\src\\main-layout\\Components\\Productivity Components",
     "\\src\\main-layout\\Components\\Small Calendar Components"
   ],
