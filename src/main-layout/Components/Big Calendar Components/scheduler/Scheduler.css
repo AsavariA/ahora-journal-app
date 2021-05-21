@@ -1,11 +1,25 @@
 .taskbar {
-    display: grid;
-    grid-template-columns: 3fr 3fr ;
+    display: flex;
     text-decoration-style: none;
+    padding: 1rem 0;
+    background-color: aliceblue;
 }
 
 .scheduler-container {
     height: calc(100vh);
     width: 100vw;
     background-color:#ffffff;
+}
+
+@media screen and (max-width: 1025px){
+    .scheduler-main{
+    overflow-x: clip;
+    overflow-y: clip;
+    }
+
+    .responsive{
+      display: block;
+      padding: 10rem 5rem;
+      text-align: center;
+    }
 }

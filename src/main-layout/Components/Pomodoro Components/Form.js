@@ -8,7 +8,7 @@ const Form = ({setTimeLeft, setIsPaused}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log(data.minutes);
+        // console.log(data.minutes);
         $('#pomodoro-form').trigger("reset");
         setTimeLeft(data.minutes*60);
         setIsPaused(false);
