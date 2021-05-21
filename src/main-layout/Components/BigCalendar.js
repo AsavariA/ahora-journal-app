@@ -1,8 +1,8 @@
 import React from 'react';
 import Scheduler from './Big Calendar Components/scheduler';
 import './Big Calendar Components/cal.css';
-/*import MessageArea from './Big Calendar Components/MessageArea';*/
 import Button from '@material-ui/core/Button';
+// eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContentText from '@material-ui/core/DialogContentText';
@@ -54,17 +54,17 @@ class Cal extends React.Component {
         this.state = {
             dialogText: 'To create an event, double click on the desired date.To increase/decresase the time span of the event in day or month view, pull the event box. To change the date of an event, drag and drop the event box on the desired date.',
             isDialogOpen: false,
-            isChecked: false
+            isChecked: false,
+            messages: []
         }
     }
 
     addMessage(message) {
         const maxLogLength = 5;
         const newMessage = { message };
-        const messages = [
-            newMessage,
-            ...this.state.messages
-        ];
+        const messages = this.state.messages;
+
+        messages.push(newMessage);
 
         if (messages.length > maxLogLength) {
             messages.length = maxLogLength;
@@ -100,8 +100,10 @@ class Cal extends React.Component {
         const { messages } = this.state;
         const { classes } = this.props;
         return (
-            
-            <div>
+            <div className='scheduler-main' style={{overflowX: 'clip'}}>
+                <div className='responsive' style={{backgroundColor: 'white', position: 'absolute', zIndex:'5000', width:'100vw', height:'100%'}}>
+                    <p>Oops! Sorry, We are currently not available on mobile. Please use a Desktop!</p>
+                </div>
                 <div className='taskbar'>
                     <Button className="btn1" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleChange} checked={this.state.isChecked} >Help</Button>
                     <Dialog

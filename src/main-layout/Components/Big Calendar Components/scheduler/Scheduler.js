@@ -21,30 +21,30 @@ export default class Scheduler extends Component {
         scheduler.attachEvent('onEventAdded', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('created', ev, id);
-                console.log(scheduler.getEvents());
+                // console.log(scheduler.getEvents());
                 var calEvents = {events: scheduler.getEvents()}
                 window.localStorage.setItem('events',JSON.stringify(calEvents))
-                console.log('created')
+                // console.log('created')
             }
         });
 
         scheduler.attachEvent('onEventChanged', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('updated', ev, id);
-                console.log(scheduler.getEvents());
+                // console.log(scheduler.getEvents());
                 var calEvents = {events: scheduler.getEvents()}
                 window.localStorage.setItem('events',JSON.stringify(calEvents))
-                console.log('updated')
+                // console.log('updated')
             }
         });
 
         scheduler.attachEvent('onEventDeleted', (id, ev) => {
             if (onDataUpdated) {
                 onDataUpdated('deleted', ev, id);
-                console.log(scheduler.getEvents());
+                // console.log(scheduler.getEvents());
                 var calEvents = {events: scheduler.getEvents()}
                 window.localStorage.setItem('events',JSON.stringify(calEvents))
-                console.log('deleted')
+                // console.log('deleted')
             }
         });
         scheduler._$initialized = true;
@@ -71,7 +71,7 @@ export default class Scheduler extends Component {
         var bleh = JSON.parse(window.localStorage.getItem('events'));
 
         if (bleh){
-            console.log(bleh.events);
+            // console.log(bleh.events);
             scheduler.parse(bleh.events);
              console.log(scheduler.getEvents());
             var calEvents = {events: scheduler.getEvents()}

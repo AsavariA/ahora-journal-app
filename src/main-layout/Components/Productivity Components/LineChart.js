@@ -58,7 +58,7 @@ const LineChart = () => {
         // console.log(data.datasets[0].data);
         var prodValues = data.datasets[0].data;
         prodValues[d.day-1]=d.prod;
-        console.log(prodValues)
+        // console.log(prodValues)
         setDatasets({
           label: 'Your Productivity',
           data: prodValues,
