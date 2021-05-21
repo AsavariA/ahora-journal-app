@@ -1,5 +1,6 @@
-.taskbar {
-    display: flex;
+.taskbar { 
+    display: grid;
+    grid-template-columns: 3fr 3fr ;
     text-decoration-style: none;
     padding: 1rem 0;
     background-color: aliceblue;

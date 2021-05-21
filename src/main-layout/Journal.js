@@ -83,6 +83,7 @@ if(localStorage.getItem('user')!==null){
                     <div className='productivity' style={{border: '2px solid black',backgroundColor:'white'}} ><Productivity/></div> 
                 </div>
                 </div>
+        
     )
 }
 
