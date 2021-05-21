@@ -1,3 +1,9 @@
+.taskbar {
+    display: grid;
+    grid-template-columns: 3fr 3fr ;
+    text-decoration-style: none;
+}
+
 .scheduler-container {
     height: calc(100vh - 150px);
     width: 100vw;
