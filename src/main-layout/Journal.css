@@ -41,6 +41,7 @@
 }
     .header h1{
         font-weight: normal;
+        text-align: center;
     }
     
     .notes { grid-area: notes; height: 20rem; overflow-y: clip;}
@@ -71,8 +72,7 @@
 
       .responsive{
         display: block;
-        padding: 10rem 2rem;
-        backdrop-filter: blur(0.5);
+        padding: 10rem 5rem;
         text-align: center;
       }
   }

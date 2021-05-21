@@ -9,6 +9,7 @@ import Kanban from "./Components/Kanban"
 import Pomodoro from "./Components/Pomodoro"
 import SmallCalendar from "./Components/SmallCalendar"
 import Productivity from "./Components/Productivity"
+// eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Link} from 'react-router-dom';
 
 function Journal(props){
@@ -51,6 +52,9 @@ if(localStorage.getItem('user')!==null){
 }
     return (
             <div className='journal-main' style={{ backgroundColor: Color }}>
+                <div className='responsive' style={{backgroundColor: 'white', position: 'absolute', zIndex:'5000', width:'100vw', height:'100%'}}>
+                    <p>Oops! Sorry, We are currently not available on mobile. Please use a Desktop!</p>
+                </div>
                 {/*<Navbar />*/}
                 <div className="header" style={{backgroundColor: Color}}>
                 <h1>Hello {UserName.split(' ')[0]} :)</h1>
