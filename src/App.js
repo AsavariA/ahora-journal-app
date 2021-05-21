@@ -1,4 +1,3 @@
-import './App.css';
 import React,{useState, useEffect} from "react"
 import Journal from "./main-layout/Journal"
 import Login from './authentication/Login'
