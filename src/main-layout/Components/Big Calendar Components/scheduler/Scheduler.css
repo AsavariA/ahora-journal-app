@@ -1,5 +1,6 @@
 .taskbar {
-    background-color: #288e9a;
+    /*background-color: #288e9a;*/
+    background-color: #0293b6;
     display: flex;
     justify-content: space-around;
     align-content: end;
@@ -19,4 +20,15 @@
     background-color:#ffffff;
 }
 
-/*//for terrace theme bgcolor::after */
+@media screen and (max-width : 1025px) {
+    .scheduler-main {
+    overflow-x:clip;
+    overflow-y:clip;
+    }
+
+    .responsive {
+        display: block;
+        padding: 10rem 5rem;
+        text-align: center
+    }
+}

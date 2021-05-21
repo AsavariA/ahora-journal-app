@@ -5,12 +5,12 @@
     "\\src\\main-layout",
     "\\src\\main-layout\\Components",
     "\\src\\main-layout\\Components\\Big Calendar Components",
-    "\\src\\main-layout\\Components\\Big Calendar Components\\MessageArea",
     "\\src\\main-layout\\Components\\Big Calendar Components\\scheduler",
     "\\src\\main-layout\\Components\\Kanban Components",
+    "\\src\\main-layout\\Components\\Pomodoro Components",
     "\\src\\main-layout\\Components\\Productivity Components",
     "\\src\\main-layout\\Components\\Small Calendar Components"
   ],
-  "SelectedNode": "\\src\\main-layout\\Components\\BigCalendar.js",
+  "SelectedNode": "\\src\\main-layout\\Components\\Big Calendar Components\\scheduler\\Scheduler.css",
   "PreviewInSolutionExplorer": false
 }
