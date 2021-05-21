@@ -30,7 +30,7 @@ const styles = theme => ({
         position: 'absolute',
         right: theme.spacing(1),
         top: theme.spacing(1),
-        color: theme.palette.grey[500],
+        color: theme.palette.black,
     },
     dialogText: {
         color: theme.palette.blue
@@ -47,7 +47,7 @@ class Cal extends React.Component {
         this.handleDialogClose = this.handleDialogClose.bind(this);
         /*this.handleDialogOK = this.handleDialogOK.bind(this);*/
         this.state = {
-            dialogText: 'To create an event, double click on the desired date.To increase/decresase the time span of the event in day or month view, pull the event box.',
+            dialogText: 'To create an event, double click on the desired date.To increase/decresase the time span of the event in day or month view, pull the event box. To change the date of an event, drag and drop the event box on the desired date.',
             isDialogOpen: false,
             isChecked: false
         }
