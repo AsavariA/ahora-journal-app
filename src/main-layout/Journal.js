@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Switch, Link} from 'react-router-dom';
 
 function Journal(props){
 const db=fire.firestore();
-const [Color,setColor] = useState('#BAE1FF');
+const [Color,setColor] = useState('#FFFFBA');
 const [UserName,setUserName] = useState('');
 const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -56,7 +56,7 @@ if(localStorage.getItem('user')!==null){
                     <p>Oops! Sorry, We are currently not available on mobile. Please use a Desktop!</p>
                 </div>
                 <div className="header" style={{backgroundColor: Color}}>
-                <h1>Hello {UserName.split(' ')[0]} :)</h1>
+                <h1 style={{textAlign:'center'}}>Hello {UserName.split(' ')[0]} :)</h1>
                 <Button aria-controls="simple-menu" aria-haspopup="true" ><Link to="/cal" style={{
                     textDecoration: 'none', color: 'black'}}>Calendar</Link></Button>
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Theme</Button>

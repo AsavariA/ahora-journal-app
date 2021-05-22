@@ -3,7 +3,7 @@
     background-color: #0293b6;
     display: flex;
     justify-content: space-around;
-    align-content: end;
+    /* align-content: end; */
 }
 
 .btn1 {
