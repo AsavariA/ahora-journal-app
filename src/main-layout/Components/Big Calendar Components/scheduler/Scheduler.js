@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, Component } from 'react'
+import React, { Component } from 'react'
 import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_terrace.css';
@@ -70,6 +70,7 @@ export default class Scheduler extends Component {
             window.localStorage.setItem('events',JSON.stringify(calEvents))
         } else {
             scheduler.parse(events);
+            // eslint-disable-next-line
             var calEvents = {events: scheduler.getEvents()}
             window.localStorage.setItem('events',JSON.stringify(calEvents))
         }
