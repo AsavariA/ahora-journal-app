@@ -21,11 +21,10 @@ useEffect(()=>{
 },[]);
 
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/cal" component={withRouter(Cal)} />
-                    <div>
-            
+        <div>
+            <Router>
+                <Switch>
+                    <Route exact path="/cal" component={withRouter(Cal)} />
                   <>
                     {user !== null ? (
                       <>
@@ -39,10 +38,11 @@ useEffect(()=>{
           
                    </>
                     )} 
-                        </>
-                        </div>
-            </Switch>
+                    </>
+                     </Switch>
         </Router>
+        </div>
+           
     )
 }
 
