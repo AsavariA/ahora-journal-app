@@ -6,7 +6,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const Column3 = (props) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const userEmail = JSON.parse (localStorage.getItem ('user')).email
+    const userEmail = JSON.parse (localStorage.getItem ('user')).email 
     const handleOnDelete = id => {
       fire
         .firestore()

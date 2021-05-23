@@ -14,29 +14,32 @@ const Landing = () => {
     setUser(us);
   }
 
-useEffect(()=>{
+useEffect(() => {
   userState();
+  // if (user){
+  //   console.log('\n\n\n\n\nnot null\n\n\n\n\n')
+  // }else{
+  //   console.log('\n\n\n\n\n null\n\n\n\n\n')
+  // }
 },[]);
 
   return (
     <div>
-      <div>
-            <>
-              {user !== null ? (
-                <>
-                  <Journal setUserState={() => setUser(null)}/>
-                </>
-              ) : (
-                 <>
-                 {toggleForm ? 
-                  (<Login loggedIn={(user) => setUser(user)} toggle={() => formMode()}/>) 
-                : (<SignUp toggle={() => formMode()}/>)}
-    
-             </>
-              )} 
-                  </>
-      </div>
+      {user ? (
+          <div>
+            <Journal setUserState={() => setUser(null)}/>
+          </div>
+          ) : (
+          <div>
+            {toggleForm ? 
+              (<Login loggedIn={(user) => setUser(user)} toggle={() => formMode()}/>): 
+              (<SignUp toggle={() => formMode()}/>)
+            }
+          </div>
+        )
+      } 
     </div>
+      
   )
 }
 

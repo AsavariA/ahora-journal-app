@@ -4,7 +4,7 @@ import './Notes.css'
 
 function useLists() {
     const [lists, setLists] = useState([]);
-    const userEmail = JSON.parse (localStorage.getItem ('user')).email
+    const userEmail = JSON.parse (localStorage.getItem ('user')).email 
   
     useEffect(() => {
       fire
@@ -30,7 +30,7 @@ function useLists() {
 const NoteList = () => {
 
     const lists = useLists();
-    const userEmail = JSON.parse (localStorage.getItem ('user')).email
+    const userEmail = JSON.parse (localStorage.getItem ('user')).email 
     const handleOnDelete = id => {
       fire
         .firestore()

@@ -24,7 +24,7 @@ const AddNote = () => {
     };
 
     const addNote = () => {
-        const userEmail = JSON.parse (localStorage.getItem ('user')).email
+        const userEmail = JSON.parse (localStorage.getItem ('user')).email 
         if (body !== "" || title !== ""){
                 db.collection('Users')
                 .doc(userEmail)
