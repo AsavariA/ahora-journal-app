@@ -52,9 +52,9 @@ if(localStorage.getItem('user')!==null){
 }
     return (
             <div className='journal-main' style={{ backgroundColor: Color }}>
-                <div className='responsive' style={{backgroundColor: 'white', position: 'absolute', zIndex:'5000', width:'100vw', height:'100%'}}>
+                {/* <div className='responsive' style={{backgroundColor: 'white', position: 'absolute', zIndex:'5000', width:'100vw', height:'100%'}}>
                     <p>Oops! Sorry, We are currently not available on mobile. Please use a Desktop!</p>
-                </div>
+                </div> */}
                 <div className="header" style={{backgroundColor: Color}}>
                 <h1 style={{textAlign:'center'}}>Hello {UserName.split(' ')[0]} :)</h1>
                 <Button aria-controls="simple-menu" aria-haspopup="true" ><Link to="/cal" style={{
@@ -75,7 +75,7 @@ if(localStorage.getItem('user')!==null){
                 <Button onClick={handleLogOut}>Logout</Button>
                 </div>
                 <div className="components" style={{backgroundColor:Color}}>
-                    <div className='notes' style={{border: '2px solid black',backgroundColor:'white'}}><Notes/></div>
+                    <div className='notes'><Notes/></div>
                     <div className='kanban' style={{border: '2px solid black',backgroundColor:'white'}}><Kanban /></div>
                     <div className='pomodoro' ><Pomodoro /></div>
                     <div className='smallcalendar'><SmallCalendar /></div>

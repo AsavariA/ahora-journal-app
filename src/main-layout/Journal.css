@@ -26,7 +26,7 @@
   }
 
   .journal-main{
-      height: 100vh;
+      height: max-content;
       width: 100%;
       border: none;
       padding-bottom: 1rem;
@@ -48,7 +48,7 @@
     .kanban { grid-area: kanban; }
     .pomodoro { grid-area: pomodoro; width: 100%;}
     .smallcalendar { grid-area: smallcalendar;}
-    .productivity { grid-area: productivity;}
+    .productivity { grid-area: productivity; width: 20rem; height: 20rem;}
 
     .components{
         display: grid;
@@ -65,10 +65,26 @@
     }
 
     @media screen and (max-width: 1025px){
-      .journal-main{
+      /* .journal-main{
       overflow-x: clip;
       overflow-y: clip;
-      }
+      } */
+
+      .components{
+        display: block;
+    }
+
+    .header {
+      padding: 0.5em;
+      display: block;
+      text-align: center;
+  }
+
+    .notes { height: 20rem; overflow-y: clip; margin-bottom: 1rem;}
+    .kanban { margin-bottom: 1rem; }
+    .pomodoro { margin-bottom: 1rem; }
+    .smallcalendar { margin-bottom: 1rem; }
+
 
       .responsive{
         display: block;

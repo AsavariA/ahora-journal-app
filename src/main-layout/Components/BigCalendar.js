@@ -87,9 +87,6 @@ class Cal extends React.Component {
         const { classes } = this.props;
         return (
             <div className='scheduler-main' style={{overflowX: 'clip'}}>
-                <div className='responsive' style={{backgroundColor: 'white', position: 'absolute', zIndex:'5000', width:'100vw', height:'100%'}}>
-                    <p>Oops! Sorry, We are currently not available on mobile. Please use a Desktop!</p>
-                </div>
                 <div className='taskbar'>
                     <Button className="btn1" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleChange} checked={this.state.isChecked} >Help</Button>
                     <Dialog

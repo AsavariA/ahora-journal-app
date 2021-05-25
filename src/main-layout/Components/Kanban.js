@@ -47,7 +47,7 @@ const Kanban = () =>{
     const [ToDoList, InProgressList, DoneList] = useLists();
 
     return(
-        <div style={{display:'flex', padding:'1rem 0.5rem'}}>
+        <div className='kanban-class'>
             <Column1 ToDoList={{ToDoList}}/>
             <Column2 InProgressList={{InProgressList}} />
             <Column3 DoneList={{DoneList}} />

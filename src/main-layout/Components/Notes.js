@@ -5,7 +5,7 @@ import './Notes Components/Notes.css'
 
 function Notes(){
     return(
-        <div className="notes-main">
+        <div className="notes-main" style={{border: '2px solid black'}}>
             <AddNote />
             <NoteList />
         </div>
