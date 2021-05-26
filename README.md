@@ -1,9 +1,7 @@
 # Ahora - A daily journalling app
 
-Check it out [here](https://journal-cc843.web.app/)
+Check it out [here](https://journal-cc843.web.app/) \
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Overview
 
 ## Project Description
 This is a ReactJs web application integrated with firebase. The application helps the user maintain a personal record of daily happenings and reflections, plan the day with the help of a scheduler and organize the tasks undertaken. It features various components to help manage anxiety, reduce stress, prioritize events and keep a track of daily life. Following are the features included:
