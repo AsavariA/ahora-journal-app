@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Ahora - A daily journalling app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Description
+This is a ReactJs web application integrated with firebase. The application helps the user maintain a personal record of daily happenings and reflections, plan the day with the help of a scheduler and organize the tasks undertaken. It features various components to help manage anxiety, reduce stress, prioritize events and keep a track of daily life. Following are the features included:
+
+#### *Kanban:*
+Kanban (meaning a signboard in Japanese) is a Japanese scheduling system which aims at improving the efficiency. The application consists of 3 kanban boards to maintain the status (to-do, in-progress, done) of your undertakings.
+
+#### *Notes section:*
+It is a textfield provided to the user to jot down work-notes and write daily affirmations.
+
+#### *Pomodoro:*
+The Pomodoro technique is a time management technique that uses a timer to break down work into intervals eparated by short breaks. The application provides a timer to commit to your task. It can be set/reset as and when requied. 
+
+#### *Prdoductivity chart:*
+
+#### *Scheduler:*
+The app also features a scheduler to schedule all your events, both present and future. Descriptive entries such as start-time, end-time, start-date, end-date, event name, etc. can be entered manually. The scheduler was built  with the help of DHTMLX, a JavaScript library.
 
 ## Available Scripts
 
