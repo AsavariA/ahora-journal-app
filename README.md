@@ -22,9 +22,11 @@ Track your daily productivity by a visual representation! This line chart allows
 The app also features a scheduler to schedule all your events, both present and future. Descriptive entries such as start-time, end-time, start-date, end-date, event name, etc. can be entered manually. The scheduler was built  with the help of DHTMLX, a JavaScript library.
 
 ## First Look
-![Image1](https://drive.google.com/file/d/1CBD5oAJUcbULv1b7F4NaWqD_U26vrrId/view?usp=sharing)
-![Image2](https://drive.google.com/file/d/1CRf6oISk-xPGuogiD1YFH7iPPOP78GeT/view?usp=sharing)
-![Image3](https://drive.google.com/file/d/1bDB43VsjHvDu9KxwE8QPmKcRiDb3x35Y/view?usp=sharing)
-![Image4](https://drive.google.com/file/d/1Xb54oRa00Yy_QOwZiATgzNCo7FSr8p-m/view?usp=sharing)
-![Image5](https://drive.google.com/file/d/1VXjjkUKTVU5jlcg78cdG5h6__2t_DW6q/view?usp=sharing)
-![Image6](https://drive.google.com/file/d/110YyxnFa0bEp3auk5MzmZS-exCzlPYEJ/view?usp=sharing)
+![Image1](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_54_58.png)
+![Image2](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_55_11.png)
+![Image3](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_55_40.png)
+![Image4](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_55_53.png)
+![Image5](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_56_51.png)
+![Image6](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_57_17.png)
+![Image7](https://github.com/AsavariA/journal-app/blob/master/first-look/Ahora%20-%20Google%20Chrome%2026-05-2021%2011_58_40.png)
+
