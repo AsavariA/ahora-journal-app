@@ -26,7 +26,7 @@
   }
 
   .journal-main{
-      height: max-content;
+      height: 100vh;
       width: 100%;
       border: none;
       padding-bottom: 1rem;
@@ -65,10 +65,10 @@
     }
 
     @media screen and (max-width: 1025px){
-      /* .journal-main{
-      overflow-x: clip;
-      overflow-y: clip;
-      } */
+      .journal-main{
+        height: max-content;
+        
+    }  
 
       .components{
         display: block;

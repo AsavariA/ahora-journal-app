@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import 'dhtmlx-scheduler';
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
@@ -79,7 +78,7 @@ export default class Scheduler extends Component {
 
     render() {
         return (
-            <div
+            <div className = "scheduler-main"
                 ref={(input) => { this.schedulerContainer = input }}
                 style={{ width: '100%', height: '100%' }}
             ></div>
