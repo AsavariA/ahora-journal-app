@@ -15,7 +15,7 @@ It is a textfield provided to the user to jot down work-notes and write daily af
 ### Pomodoro:
 The Pomodoro technique is a time management technique that uses a timer to break down work into intervals separated by short breaks. The application provides a timer to commit to your task. It can be set/reset as and when requied. 
 
-### Prdoductivity chart:
+### Productivity chart:
 Track your daily productivity by a visual representation! This line chart allows you to input your daily productivity values and analyse how you've been doing all month.
 
 ### Scheduler:
